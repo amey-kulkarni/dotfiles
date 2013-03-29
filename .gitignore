@@ -1,0 +1,12 @@
+# Ignore tags created by etags and ctags
+TAGS
+!TAGS/
+tags
+!tags/
+
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
