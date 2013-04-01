@@ -10,3 +10,8 @@ Session.vim
 .netrwhist
 *~
 
+.vim/plugin/cscope_maps.vim.txt
+.vim/plugin/mimicpak.vim
+.vim/plugin/taglist.vim
+.vim/doc/taglist.txt
+.vim/syntax/sv.vim
