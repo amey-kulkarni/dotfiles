@@ -62,6 +62,17 @@ if has("autocmd")
     \ endif
 
   augroup END
+  
+  augroup filetypedetect
+    au! BufRead,BufNewFile *.sv  setfiletype SV
+    au! BufRead,BufNewFile *.svi setfiletype SV
+  augroup END
+
+  map <C-L> :!~/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+
+  set tags=~/.vim/stdtags,tags;
+
+  autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 else
 
@@ -82,7 +93,4 @@ if exists("did_load_filetypes")
     finish
 endif
 
-augroup filetypedetect
-    au! BufRead,BufNewFile *.sv  setfiletype SV
-    au! BufRead,BufNewFile *.svi setfiletype SV
-augroup END
+
