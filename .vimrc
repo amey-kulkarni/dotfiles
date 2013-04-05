@@ -88,6 +88,7 @@ set tabstop=4
 set shiftwidth=4
 set autoread
 set mouse=a         " Enable mouse
+set completeopt=longest,menu,preview
 
 if exists("did_load_filetypes")
     finish
