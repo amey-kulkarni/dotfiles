@@ -1,4 +1,4 @@
 set gfn=Lucida\ Console\ Semi-Condensed\ 11
-colorscheme luinnar
+colorscheme eclipse
 
 set guioptions+=b   " Enable horizontal scroll bar
