@@ -95,7 +95,9 @@ if exists("did_load_filetypes")
 endif
 
 " Code folding settings
-set foldmethod=indent   " fold based on indent
+set foldmethod=syntax   " fold based on syntax
 set foldnestmax=10      " deepest fold is 10 levels
 set nofoldenable        " don't fold by default
 set foldlevel=1
+
+set number              " display line numbers
