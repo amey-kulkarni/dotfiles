@@ -90,10 +90,6 @@ set autoread
 set mouse=a         " Enable mouse
 set completeopt=longest,menu,preview
 
-if exists("did_load_filetypes")
-    finish
-endif
-
 " Code folding settings
 set foldmethod=syntax   " fold based on syntax
 set foldnestmax=10      " deepest fold is 10 levels
@@ -101,3 +97,9 @@ set nofoldenable        " don't fold by default
 set foldlevel=1
 
 set number              " display line numbers
+
+if exists("did_load_filetypes")
+    finish
+endif
+
+
