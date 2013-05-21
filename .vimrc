@@ -98,6 +98,14 @@ set foldlevel=1
 
 set number              " display line numbers
 
+" Browser-like tab navigation
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>i
+
 if exists("did_load_filetypes")
     finish
 endif
