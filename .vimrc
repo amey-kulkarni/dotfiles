@@ -74,6 +74,7 @@ if has("autocmd")
 
   autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+  au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/verilog_systemverilog.vim
 else
 
   set autoindent		" always set autoindenting on

@@ -16,6 +16,13 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# Record command history
+if [ -n "${BASH_VERSION}" ]; then
+    trap "caller >/dev/null || \
+        printf '%s\\n' \"$(date '+%Y-%m-%dT%H:%M:%S%z')\
+        \$(tty) \${BASH_COMMAND}\" 2>/dev/null >>~/.command.log" DEBUG
+fi
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
