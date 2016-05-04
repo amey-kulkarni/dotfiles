@@ -8,7 +8,8 @@ endif
 set nocompatible
 
 " allow backspacing over everything in insert mode
-set backspace=2
+" set backspace=2
+set backspace=indent,eol,start
 
 set nobackup		" do not keep a backup file, use versions instead
 set history=50		" keep 50 lines of command line history
@@ -21,6 +22,8 @@ set incsearch		" do incremental searching
 set lazyredraw
 set showmatch
 set mat=2
+
+set linebreak       " wrap lines at word boundaries
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -51,7 +54,7 @@ if has("autocmd")
   au!
 
   " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  "autocmd FileType text setlocal textwidth=78
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -70,7 +73,7 @@ if has("autocmd")
 
   map <C-L> :!~/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 
-  set tags=~/.vim/stdtags,tags;
+  set tags=~/.vim/stdtags,tags,./tags,../tags,./stm/tags,./common/dv/uvm/agents/bea_agent/tags,./common/dv/uvm/agents/nevt_agent/tags,./common/dv/uvm/agents/sfa_agent/tags;
 
   autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
@@ -92,12 +95,19 @@ set mouse=a         " Enable mouse
 set completeopt=longest,menu,preview
 
 " Code folding settings
-set foldmethod=syntax   " fold based on syntax
+set foldmethod=indent   " fold based on indent
 set foldnestmax=10      " deepest fold is 10 levels
 set nofoldenable        " don't fold by default
 set foldlevel=1
 
 set number              " display line numbers
+
+set wildmenu            " enable menu at the bottom of the window
+set wildmode=list:longest,full      " On first <tab>, a list of completions will be shown and command will
+                                    " completed to the longest common command.
+                                    " On second <tab>, the wildmenu will show
+                                    " up with all the completions that were
+                                    " listed before.
 
 " Browser-like tab navigation
 nnoremap <C-S-tab> :tabprevious<CR>

@@ -326,6 +326,9 @@ syn keyword uvmMethod            pack_real pack_string pack_time put_bits put_by
 syn keyword uvmMethod            unpack_field unpack_field_int unpack_object unpack_object_ext unpack_real
 syn keyword uvmMethod            unpack_string unpack_time
 
+" uvm_sv/src/base/uvm_phase.svh
+syn keyword uvmClass             uvm_phase
+
 " uvm_sv/src/base/uvm_port_base.svh
 syn keyword uvmTypeDef           uvm_port_type_e uvm_port_list
 syn keyword uvmClass             uvm_port_component_base

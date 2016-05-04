@@ -1,0 +1,29 @@
+alias   rm          'rm -i'
+alias   ls          '/bin/ls --color=auto -CF'
+alias   l           'ls'
+alias   la          'ls -a'
+alias   lr          'ls -rlt --color=no'
+alias   cl          clear
+alias   pu          pushd
+alias   po          popd
+alias   h           history
+alias   cp          'cp -i'
+alias   mv          'mv -i'
+alias   ll          'ls -Alh'
+alias   llt         'll -t'
+alias   lll         "ls -Alh $* | less"
+alias   lf          'ls -AF'
+#alias   man        'man -a $*'
+alias   chklic      '/opt/tools/synopsys/scl_11.0/amd64/bin/lmstat -c "27000@lic0" -a'
+alias   xt          ~/bin/start_xterms.pl
+alias   setproj     'setenv PROJ `pwd`'
+alias   setcommon   source ~/.commonenv 
+alias   scripts     ' cd /opt/project/starlink/scripts '
+alias   mkwdir      'mkdir \!:1; cd \!:1; ln -s ../build/Makefile .' 
+alias   setp4cl     'setenv P4CLIENT `skhms_common/script/get_p4client.pl`'
+alias   mydve       '$PROJ/synopsys_wrapper dve -full64'
+alias   openp4v     'p4v -p $P4PORT -u $P4USER -c $P4CLIENT'
+
+alias   cdproj      'cd $PROJ'
+alias   cdt         'cd $PROJ/sims/testcases'
+alias   cdlib       'cd $PROJ/sims/lib'
